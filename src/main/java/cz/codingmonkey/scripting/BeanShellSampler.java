@@ -1,8 +1,8 @@
-package cz.codingmonkey.tests;
+package cz.codingmonkey.scripting;
 
 import java.io.Serializable;
 
-import static cz.codingmonkey.tests.BeanShellUtils.runInterpreter;
+import static cz.codingmonkey.scripting.BeanShellUtils.runInterpreter;
 
 /**
  * @author Richard Stefanca

@@ -1,4 +1,4 @@
-package cz.codingmonkey.tests;
+package cz.codingmonkey.scripting;
 
 /**
  * @author Richard Stefanca

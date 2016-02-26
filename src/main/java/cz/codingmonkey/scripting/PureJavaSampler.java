@@ -1,10 +1,10 @@
-package cz.codingmonkey.tests;
+package cz.codingmonkey.scripting;
 
 import org.apache.jmeter.protocol.java.sampler.JavaSamplerContext;
 
 import java.io.Serializable;
 
-import static cz.codingmonkey.tests.Fibonacci.fib;
+import static cz.codingmonkey.scripting.Fibonacci.fib;
 
 /**
  * @author Richard Stefanca

@@ -1,4 +1,4 @@
-package cz.codingmonkey.tests;
+package cz.codingmonkey.scripting;
 
 import org.apache.jmeter.config.Arguments;
 import org.apache.jmeter.protocol.java.sampler.JavaSamplerContext;
@@ -6,7 +6,7 @@ import org.apache.jmeter.protocol.java.sampler.JavaSamplerContext;
 import java.io.Serializable;
 import java.util.function.Supplier;
 
-import static cz.codingmonkey.tests.InvocableScriptEngine.InvocableScriptEngineBuilder;
+import static cz.codingmonkey.scripting.InvocableScriptEngine.InvocableScriptEngineBuilder;
 
 /**
  * @author Richard Stefanca
@@ -20,8 +20,8 @@ public class JSR223Sampler extends AbstractFibonacciSampler implements Serializa
 
     private static Supplier<InvocableScriptEngine> getEngineSupplier(String engineName, boolean initOnce) {
         if (initOnce) {
-            final InvocableScriptEngine engine = getFibonacci(engineName); // returns initialized engine
-            return () -> engine;
+            final InvocableScriptEngine engine = getFibonacci(engineName);
+            return () -> engine; // returns initialized engine
         } else {
             return () -> getFibonacci(engineName); // returns new engine for each call
         }

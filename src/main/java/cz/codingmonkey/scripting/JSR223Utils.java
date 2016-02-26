@@ -1,4 +1,4 @@
-package cz.codingmonkey.tests;
+package cz.codingmonkey.scripting;
 
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;

@@ -46,7 +46,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>cz.codingmonkey.tests.TestAll</mainClass>
+                    <mainClass>cz.codingmonkey.scripting.TestAll</mainClass>
                     <arguments>
                         <argument>10</argument>
                         <argument>15</argument>
