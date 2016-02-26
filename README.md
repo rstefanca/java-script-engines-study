@@ -15,6 +15,7 @@ JavaScript snippet
 </code>
 
 Groovy snippet
+
 <code>
 public static final String FIB_GROOVY =
     "def fib(n) {" +
