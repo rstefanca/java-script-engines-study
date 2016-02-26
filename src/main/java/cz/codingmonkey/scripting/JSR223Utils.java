@@ -42,6 +42,9 @@ public final class JSR223Utils {
     public static ScriptEngine getInvocableEngine(String engineName) throws ScriptException {
         ScriptEngine engine = new ScriptEngineManager().getEngineByName(engineName);
         if (engine == null) {
+            if (engineName.equals(ENGINE_GROOVY)) {
+                throw new RuntimeException("Groovy engine cannot be initialized. Add groovy-all dependency.");
+            }
             throw new RuntimeException("Engine not found");
         }
         return engine;
