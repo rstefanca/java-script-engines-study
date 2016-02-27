@@ -1,7 +1,5 @@
 package cz.codingmonkey.scripting;
 
-import org.apache.jmeter.protocol.java.sampler.JavaSamplerContext;
-
 import java.io.Serializable;
 
 import static cz.codingmonkey.scripting.Fibonacci.fib;
@@ -14,11 +12,6 @@ public class PureJavaSampler extends AbstractFibonacciSampler implements Seriali
     @Override
     protected void runTestInternal() {
         fib(n);
-    }
-
-    @Override
-    public void teardownTest(JavaSamplerContext context) {
-        this.getLogger().debug("teardown");
     }
 
     public static void run(int loops, int n) throws Exception{

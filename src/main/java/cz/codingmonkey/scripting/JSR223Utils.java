@@ -40,6 +40,10 @@ public final class JSR223Utils {
     }
 
     public static ScriptEngine getInvocableEngine(String engineName) throws ScriptException {
+        if (engineName == null) {
+            throw new IllegalArgumentException("engineName");
+        }
+
         ScriptEngine engine = new ScriptEngineManager().getEngineByName(engineName);
         if (engine == null) {
             if (engineName.equals(ENGINE_GROOVY)) {
@@ -51,10 +55,6 @@ public final class JSR223Utils {
     }
 
     public static ScriptEngine getInvocableEngine(String engineName, String script) throws ScriptException {
-        if (engineName == null) {
-            throw new IllegalArgumentException("engineName");
-        }
-
         if (script == null) {
             throw new IllegalArgumentException("script");
         }
