@@ -12,14 +12,14 @@ import java.util.Map;
 public final class JSR223Utils {
 
     public static final String FIB_JS =
-            "var FibonacciClass = Java.type('cz.codingmonkey.tests.Fibonacci');\n" +
+            "var FibonacciClass = Java.type('cz.codingmonkey.scripting.Fibonacci');\n" +
             "function fib(n) {\n" +
             "  return FibonacciClass.fib(n);\n" +
             "}";
 
     public static final String FIB_GROOVY =
             "def fib(n) {" +
-            "\tcz.codingmonkey.tests.Fibonacci.fib(n)" +
+            "\tcz.codingmonkey.scripting.Fibonacci.fib(n)" +
             "}";
 
     public static final String ENGINE_NASHORN = "nashorn";
@@ -41,7 +41,7 @@ public final class JSR223Utils {
 
     public static ScriptEngine getInvocableEngine(String engineName) throws ScriptException {
         if (engineName == null) {
-            throw new IllegalArgumentException("engineName");
+            throw new IllegalArgumentException("engineName is null");
         }
 
         ScriptEngine engine = new ScriptEngineManager().getEngineByName(engineName);
@@ -56,7 +56,7 @@ public final class JSR223Utils {
 
     public static ScriptEngine getInvocableEngine(String engineName, String script) throws ScriptException {
         if (script == null) {
-            throw new IllegalArgumentException("script");
+            throw new IllegalArgumentException("script is null");
         }
 
         ScriptEngine engine = getInvocableEngine(engineName);

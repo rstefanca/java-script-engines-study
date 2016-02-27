@@ -12,7 +12,7 @@ public class InvocableScriptEngine {
 
     private final String function;
 
-    public static ScriptEngine getInvocableEngine(String engineName, String script) {
+    private static ScriptEngine getInvocableEngine(String engineName, String script) {
         try {
             return JSR223Utils.getInvocableEngine(engineName, script);
         } catch (Exception ex) {

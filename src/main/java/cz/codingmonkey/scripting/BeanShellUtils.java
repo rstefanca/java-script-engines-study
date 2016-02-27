@@ -10,7 +10,7 @@ public class BeanShellUtils {
 
     public static String SCRIPT =
             "public static long fib(int n) {\n" +
-            "        return cz.codingmonkey.tests.Fibonacci.fib(n);\n" +
+            "        return cz.codingmonkey.scripting.Fibonacci.fib(n);\n" +
             "    }\n" +
             " fib(n);\n";
 
